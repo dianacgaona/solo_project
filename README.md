@@ -10,10 +10,17 @@ Cloneterest is a clone of Pinterest I built using JavaScript and React/Redux.
 
 In a month period, this app will, at the least, do the following:
 
-- Creating a new user and logging in
+- Create a new user and logging in
 - Create a new pin or board for a user
-- Searching for other users by name or username
-- Searching for pins or boards by title or name
+- Create a pin and assigning it to a board
+- Delete a board or a pin
+- Search for other users by name or username
+- Search for pins or boards by title or name
+
+##### Bonus
+
+- Create messages route for users to communicate with each ohter
+- Create notifications for users to share content from the page as well as from the web.
 
 # Design Docs
 

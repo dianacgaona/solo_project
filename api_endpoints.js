@@ -1,33 +1,42 @@
 # API Endpoints
 
-### Session
-* `POST /api/session`
-* Creates new session on user login
-* `DELETE /api/session`
-* Deletes session on user logout
+### Html
+* GET `/`
+	* loads Cloneterest homepage
 
 ### Users
-* `GET /api/users`
-  * Users index/search
-* `POST /api/users`
-  * Creates new user
-* `GET /api/users/:userId`
-  * Fetches single existing user profile
-* `PATCH /api/users/:userId`
-  * Allows user to update their profile
+
+*GET `/api/users`
+  * Fetches all the users
+* GET `/api/users/:userId`
+	* Fetches single existing user profile
+* PATCH `/api/users/:userId`
+	* User can update profile
+* POST `/api/users`
+	* Creates new user
 
 ### Boards
-* `GET /api/users/board`
-  * Fetches boards on user profile
-* `POST /api/users/board:id`
-  * Creates new board on user profile
-* `DELETE /api/user/board`
-  * Deletes board on user profile
+
+* GET `/api/boards/users/:userId`
+	* Fetches all boards of a specific user
+GET `/api/boards/:boardId`
+	Fetches selected board for the user
+POST `/api/:userId/boards`
+	Creates a new board for a user
+DELETE `/api/boards/:boardId`
+	Deletes selected board of a user
+PATCH `/api/boards/:boardId`
+	User can edit selected board
 
 ### Pins
-* `GET /api/pin`
-  * Fetches single existing pin
-* `POST /api/pin`
-  * Creates new pin on user board
-* `DELETE /api/session`
-  * Deletes pin on user's board
+
+* GET `/api/pins/boards/:boardId`
+	* Fetches all pins from a specific board
+* GET `/api/pins/:pinId`
+	* Fetches selected pin from the board
+* POST `/api/:boardId/pins`
+	* Creates a new pin in selected board
+* DELETE `/api/pins/:pinId`
+	* Deletes selected pin from a board
+* PATCH `/api/pins/:pinId`
+	* User can edit selected board

@@ -11,25 +11,15 @@
 | name        | string    | not null                  |
 | age         | integer   |
 
-## profiles
-
-| column name | data type | details               |
-| ----------- | --------- | --------------------- |
-| id          | integer   | not null, primary key |
-| followers   | integer   | not null              |
-| following   | integer   | not null              |
-| board_id    | integer   |
-| pin_id      | integer   |
-
 ## boards
 
 | column name | data type | details               |
 | ----------- | --------- | --------------------- |
 | id          | integer   | not null, primary key |
-| user_board  | integer   | not null, foreign key |
+| user_id     | integer   | not null, foreign key |
 | name        | string    | not null              |
 | description | string    |
-| images      | integer   | not null              |
+| images      | string    | not null              |
 
 ## pins
 
