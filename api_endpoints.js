@@ -21,7 +21,7 @@
 	* Fetches all boards of a specific user
 GET `/api/boards/:boardId`
 	Fetches selected board for the user
-POST `/api/:userId/boards`
+POST `/api/boards`
 	Creates a new board for a user
 DELETE `/api/boards/:boardId`
 	Deletes selected board of a user
@@ -34,7 +34,7 @@ PATCH `/api/boards/:boardId`
 	* Fetches all pins from a specific board
 * GET `/api/pins/:pinId`
 	* Fetches selected pin from the board
-* POST `/api/:boardId/pins`
+* POST `/api/pins`
 	* Creates a new pin in selected board
 * DELETE `/api/pins/:pinId`
 	* Deletes selected pin from a board

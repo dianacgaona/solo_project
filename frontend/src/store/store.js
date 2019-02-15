@@ -1,0 +1,8 @@
+import { createStore, applyMiddleware } from 'redux';
+import logger from 'redux-logger';
+import thunk from 'redux-thunk'; //checking if its a function or an action after we dispatch
+import rootReducer from '../reducers/rootReducer';
+
+const store = createStore(rootReducer, {}, applyMiddleware(logger, thunk));
+
+export default store;

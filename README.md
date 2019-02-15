@@ -34,7 +34,13 @@ In a month period, this app will, at the least, do the following:
 
 ## 1st Phase: Set up the backend and build up a demo login (4 days)
 
-- **Objective:** Get the queries connected to the routes and build up the frontend. Get a user to log in.
+- **Objective:**
+- Set up the homepage
+  - Work on Navibar
+  - Create at least 10 sample pins to work on CSS
+  - Work on CSS for home page (Every. Single. Little. Detail)
+    - On hover: Pin(img), opacity darkens and forms shows up to save pin on a board.
+    - On hover: home, profile, logo
 
 ## Phase 2: Starts creating components as I work on Users and Profiles (4 days)
 
