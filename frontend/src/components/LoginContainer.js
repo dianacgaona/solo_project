@@ -1,16 +1,16 @@
-import { connect } from "react-redux";
-import Login from "./Login";
-import { fetchAllPins } from "../actions/actionDisplayLoginPins.js";
+import { connect } from 'react-redux';
+import Login from './Login';
+import { fetchAllPins } from '../actions/actionPins';
 
 const mapStateToProps = state => {
   return {
-    pins: state.pins
+    pins: state.pins,
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchAllPins: () => dispatch(fetchAllPins())
+    fetchAllPins: () => dispatch(fetchAllPins()),
   };
 };
 

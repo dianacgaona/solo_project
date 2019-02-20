@@ -1,15 +1,17 @@
-var createError = require("http-errors");
-var express = require("express");
-var path = require("path");
-var cookieParser = require("cookie-parser");
-var logger = require("morgan");
+const express = require("express");
+const path = require("path");
+const logger = require("morgan");
+const cookieParser = require("cookie-parser");
+const createError = require("http-errors");
+const session = require("express-session");
+const passport = require("passport");
 
 let indexRouter = require("./routes/index");
 let usersRouter = require("./routes/users");
 let pinsRouter = require("./routes/pins");
 let boardsRouter = require("./routes/boards");
 
-var app = express();
+let app = express();
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
@@ -19,10 +21,22 @@ app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+// other middleware stuff
+app.use(
+  session({
+    secret: "never gonna give u up",
+    resave: false,
+    saveUninitialized: true
+  })
+);
+app.use(passport.initialize());
+app.use(passport.session());
+
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
-app.use("api/users", usersRouter);
+app.use("/api/users", usersRouter);
 app.use("/api/pins", pinsRouter);
 app.use("/api/boards", boardsRouter);
 

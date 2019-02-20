@@ -1,4 +1,4 @@
-import { RECEIVE_PINS } from '../actions/actionDisplayLoginPins';
+import { RECEIVE_PINS } from "../actions/actionDisplayLoginPins";
 
 export const loginPinsReducer = (oldState = [], action) => {
   switch (action.type) {

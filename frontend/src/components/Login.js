@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import "../css/login.css";
+import React, { Component } from 'react';
+import '../css/login.css';
 
 export default class Login extends Component {
   state = {};
@@ -19,7 +19,7 @@ export default class Login extends Component {
   };
 
   render() {
-    console.log(this.props, "my pins");
+    console.log(this.props, 'my pins');
     return (
       <div>
         <div className="parent-div-pin">{this.displayLoginPins()}</div>
@@ -41,7 +41,7 @@ export default class Login extends Component {
               </h3>
             </div>
             <form>
-              <div className="email-container">
+              <div className="input-container">
                 <input
                   className="form-input"
                   type="text"
@@ -49,11 +49,13 @@ export default class Login extends Component {
                 />
                 <br />
               </div>
-              <input
-                className="form-input"
-                type="text"
-                placeholder="Password"
-              />
+              <div className="input-container">
+                <input
+                  className="form-input"
+                  type="text"
+                  placeholder="Password"
+                />
+              </div>
               <br />
               <button type="submit">Log in</button>
               <br />

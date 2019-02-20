@@ -1,8 +1,8 @@
-import { combineReducers } from "redux";
-import { pinsReducer } from "./pinsReducer";
+import { combineReducers } from 'redux';
+import { pinsReducer } from './pinsReducer';
 
 const rootReducer = combineReducers({
-  pins: pinsReducer
+  pins: pinsReducer,
 });
 
 export default rootReducer;

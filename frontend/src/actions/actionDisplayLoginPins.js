@@ -1,11 +1,11 @@
-import * as pinsApi from '../utility/utilPins';
+import * as pinsApi from "../utility/utilPins";
 
-export let RECEIVE_PINS = 'RECEIVE_PINS';
+export let RECEIVE_PINS = "RECEIVE_PINS";
 
 export const receivedPins = pins => {
   return {
     type: RECEIVE_PINS,
-    pins: pins,
+    pins: pins
   };
 };
 

@@ -52,6 +52,7 @@
 
 /* form logo  */
 .logo-div {
+  margin-top: -80px;
   height: 45px;
 }
 
@@ -83,14 +84,14 @@
 }
 
 .form-text {
-  font-size: 16px;
+  font-size: 18px;
   font-family: sans-serif;
   color: rgb(33, 25, 34);
   text-align: center;
   margin: -15px 0px 20px;
 }
 
-.email-container {
+.input-container {
   margin-bottom: 7px;
 }
 
