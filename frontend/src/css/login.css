@@ -1,0 +1,104 @@
+/* background pins  */
+
+.parent-div-pin {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pin-div {
+  padding: 8px;
+  margin: -3px;
+}
+
+.pins {
+  width: 236px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* transparent div with form and button */
+
+.transparent-div {
+  background: url(../assets/transpBlack25.png);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-height: 100%;
+}
+
+/* form div */
+
+.form-div {
+  /* margin-top: 50px; */
+  width: 440px;
+  height: 500px;
+  background-color: #fff;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  /* flex-direction: column; */
+  border-radius: 10px;
+  /* padding: 20px 10px; */
+}
+
+/* form logo  */
+.logo-div {
+  height: 45px;
+}
+
+.login-logo {
+  height: 42px;
+  width: 42px;
+}
+
+/* login text fields */
+
+.login-container {
+  margin: 0px auto 25px;
+  height: 38px;
+  width: 270px;
+}
+
+.login-signup {
+  font-size: 32px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: rgb(51, 51, 51);
+  padding: 3px;
+  letter-spacing: -1.2px;
+}
+
+.text-container {
+  width: 270px;
+  margin: 0px auto 25px;
+}
+
+.form-text {
+  font-size: 16px;
+  font-family: sans-serif;
+  color: rgb(33, 25, 34);
+  text-align: center;
+  margin: -15px 0px 20px;
+}
+
+.email-container {
+  margin-bottom: 7px;
+}
+
+.form-input {
+  height: 40px;
+  width: 268px;
+  font-size: 18px;
+  letter-spacing: -0.4px;
+  /* color: rgb(333); */
+  border-radius: 4px;
+}
