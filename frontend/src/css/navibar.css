@@ -1,0 +1,29 @@
+.navi-bar {
+  display: flex;
+  justify-content: space-around;
+  height: 62px;
+  background-color: #ffffff;
+  border-bottom: solid #efefef 1px;
+  align-items: center;
+}
+
+.posh-logo {
+  height: 30px;
+  width: 30px;
+}
+
+.search-bar {
+  border-style: none;
+  height: 40px;
+  width: 845px;
+  background-color: #efefef;
+  border-radius: 5px;
+}
+
+.navi-links {
+  color: red;
+}
+
+.navi-links a:hover {
+  background-color: #f0f0f0;
+}

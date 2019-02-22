@@ -4,7 +4,7 @@ import "../App.css";
 export const PinList = props => {
   console.log(props.pins, "this");
   // debugger;
-  return props.pins.map((pin, i) => {
+  return props.pins.map(pin => {
     return (
       <div key={pin.id} className="pin-div">
         <img src={pin.url} alt="" className="pins" />

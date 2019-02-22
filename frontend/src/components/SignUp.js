@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../css/login.css';
 
-export default class Login extends Component {
+export default class SignUp extends Component {
   render() {
     return (
       <div>
@@ -16,7 +16,7 @@ export default class Login extends Component {
               />
             </div>
             <div className="login-container">
-              <h3 className="login-signup">Log in to see more</h3>
+              <h3 className="login-signup">Sign up to see more</h3>
             </div>
             <div className="text-container">
               <h3 className="form-text">
@@ -25,24 +25,24 @@ export default class Login extends Component {
             </div>
             <form>
               <div className="input-container">
-                <input
-                  className="form-input"
-                  type="text"
-                  placeholder="Email or phone number"
-                />
-                <br />
+                <input className="form-input" type="text" placeholder="Email" />
               </div>
+              <br />
               <div className="input-container">
                 <input
                   className="form-input"
                   type="text"
-                  placeholder="Password"
+                  placeholder="Create a password"
                 />
+              </div>
+              <br />
+              <div className="input-container">
+                <input className="form-input" type="text" placeholder="Name" />
               </div>
               <br />
               <button type="submit">Log in</button>
               <br />
-              <span>Not on Poshpin Yet? Sign Up</span>
+              <span>Already a member? Log in</span>
             </form>
           </div>
         </div>

@@ -1,14 +1,14 @@
-const { db } = require("../index.js");
+const { db } = require('../index.js');
 
-const authHelpers = require("../../auth/helper");
+const authHelpers = require('../../auth/helper');
 
 const getAllUsers = (req, res, next) => {
-  db.any("SELECT * FROM users")
+  db.any('SELECT * FROM users')
     .then(users => {
       res.status(200).json({
-        status: "success",
+        status: 'success',
         users: users,
-        message: "users received"
+        message: 'users received',
       });
     })
     .catch(error => {
@@ -18,12 +18,12 @@ const getAllUsers = (req, res, next) => {
 
 const getSingleUser = (req, res, next) => {
   let userId = parseInt(req.params.id);
-  db.any("SELECT * FROM users WHERE id=$1", [userId])
+  db.any('SELECT * FROM users WHERE id=$1', [userId])
     .then(user => {
       res.status(200).json({
-        status: "success",
+        status: 'success',
         user: user,
-        message: "User received"
+        message: 'User received',
       });
     })
     .catch(error => {
@@ -33,12 +33,12 @@ const getSingleUser = (req, res, next) => {
 
 const deleteUser = (req, res, next) => {
   let userId = parseInt(req.params.id);
-  db.result("DELETE FROM users WHERE id=$1", userId)
+  db.result('DELETE FROM users WHERE id=$1', userId)
     .then(result => {
       res.status(200).json({
-        status: "success",
-        message: "User down",
-        result: result
+        status: 'success',
+        message: 'User down',
+        result: result,
       });
     })
     .catch(error => {
@@ -49,32 +49,31 @@ const deleteUser = (req, res, next) => {
 const createUser = (req, res, next) => {
   const hash = authHelpers.createHash(req.body.password);
   db.none(
-    "INSERT INTO users ( username, password_digest, email, first_name, last_name, about, profile_picture) VALUES (${username}, ${password}, ${email}, ${first_name}, ${last_name}, ${about}, ${profile_picture})",
+    'INSERT INTO users ( username, password_digest, email, name, about, profile_picture) VALUES (${username}, ${password}, ${email}, ${name}, ${about}, ${profile_picture})',
     {
       username: req.body.username,
       password: hash,
       email: req.body.email,
-      first_name: req.body.first_name,
-      last_name: req.body.last_name,
+      name: req.body.name,
       about: req.body.about,
-      profile_picture: req.body.profile_picture
+      profile_picture: req.body.profile_picture,
     }
   )
     .then(() => {
       res.status(200).json({
-        mesage: "Registration successful!"
+        mesage: 'Registration successful!',
       });
     })
     .catch(error => {
       res.status(500).json({
-        message: error
+        message: error,
       });
     });
 };
 
 const logoutUser = (req, res, next) => {
   req.logout();
-  res.status(200).send("logout success");
+  res.status(200).send('logout success');
 };
 
 const loginUser = (req, res) => {
@@ -96,5 +95,5 @@ module.exports = {
   createUser,
   logoutUser,
   loginUser,
-  isLoggedIn
+  isLoggedIn,
 };
