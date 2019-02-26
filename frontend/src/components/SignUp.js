@@ -1,7 +1,32 @@
-import React, { Component } from 'react';
-import '../css/login.css';
+import React, { Component } from "react";
+import "../css/login.css";
 
 export default class SignUp extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: "",
+      password_digest: "",
+      name: ""
+    };
+  }
+
+  handleChange = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  };
+
+  handleSubmit = e => {
+    e.preventDefault();
+    this.props.newUser(this.state).then(() => {
+      this.props.loginUser({
+        email: this.state.email,
+        password_digest: this.state.password_digest
+      });
+    });
+  };
+
   render() {
     return (
       <div>
@@ -23,24 +48,41 @@ export default class SignUp extends Component {
                 Access Poshpin's best ideas with a free account
               </h3>
             </div>
-            <form>
+            <form onSubmit={this.handleSubmit}>
               <div className="input-container">
-                <input className="form-input" type="text" placeholder="Email" />
+                <input
+                  onChange={this.handleChange}
+                  name="email"
+                  value={this.state.email}
+                  className="form-input"
+                  type="text"
+                  placeholder="Email"
+                />
               </div>
               <br />
               <div className="input-container">
                 <input
+                  onChange={this.handleChange}
+                  name="password_digest"
+                  value={this.state.password_digest}
                   className="form-input"
-                  type="text"
+                  type="password"
                   placeholder="Create a password"
                 />
               </div>
               <br />
               <div className="input-container">
-                <input className="form-input" type="text" placeholder="Name" />
+                <input
+                  onChange={this.handleChange}
+                  name="name"
+                  value={this.state.name}
+                  className="form-input"
+                  type="text"
+                  placeholder="Name"
+                />
               </div>
               <br />
-              <button type="submit">Log in</button>
+              <button type="submit">Sign Up</button>
               <br />
               <span>Already a member? Log in</span>
             </form>

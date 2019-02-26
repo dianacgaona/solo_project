@@ -1,5 +1,7 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
+const passport = require('../auth/local');
+const { loginRequired } = require('../auth/helpers');
 const {
   getAllUsers,
   getSingleUser,
@@ -7,17 +9,15 @@ const {
   createUser,
   logoutUser,
   loginUser,
-  isLoggedIn
-} = require("../db/queries/userQueries");
-const passport = require("../auth/local");
-const { loginRequired } = require("../auth/helper");
+  isLoggedIn,
+} = require('../db/queries/userQueries');
 
-router.get("/", getAllUsers);
-router.get("/:id", getSingleUser);
-router.delete("/:id", deleteUser);
-router.post("/new", createUser);
-router.post("/login", passport.authenticate("local", {}), loginUser);
-router.get("/isLoggedIn", isLoggedIn);
-router.post("/logout", loginRequired, logoutUser);
+router.get('/', getAllUsers);
+router.get('/:id', getSingleUser);
+router.post('/islogged', isLoggedIn);
+router.post('/new', createUser);
+router.post('/login', passport.authenticate('local'), loginUser);
+router.post('/logout', loginRequired, logoutUser);
+router.delete('/:id', deleteUser);
 
 module.exports = router;

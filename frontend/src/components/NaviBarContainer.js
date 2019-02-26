@@ -1,22 +1,21 @@
 import { connect } from 'react-redux';
-import Home from './Home';
-import { fetchAllPins } from '../actions/actionPins';
+import NaviBar from './NaviBar.js';
+import { logoutUser } from '../actions/actionSession.js';
 
 const mapStateToProps = state => {
-  // debugger;
   return {
-    pins: state.pins,
+    email: state.email,
   };
 };
 
 const mapDispatchToProps = dispatch => {
-  //debugger;
+  // debugger;
   return {
-    fetchAllPins: () => dispatch(fetchAllPins()),
+    logoutUser: () => dispatch(logoutUser()),
   };
 };
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Home);
+)(NaviBar);

@@ -5,10 +5,10 @@ CREATE DATABASE poshpin;
 
 CREATE TABLE users(
   id SERIAL PRIMARY KEY,
-  username VARCHAR NOT NULL,
+  email VARCHAR NOT NULL UNIQUE,
   password_digest VARCHAR NOT NULL,
-  email VARCHAR NOT NULL,
-  name VARCHAR NOT NULL,
+  name VARCHAR,
+  username VARCHAR,
   about TEXT,
   profile_picture VARCHAR
 );
@@ -29,7 +29,7 @@ CREATE TABLE pins(
   body VARCHAR
 );
 
-INSERT INTO users(username, password_digest, email, name, about, profile_picture) VALUES ('firstuser', 'cats123', 'firstuser@user.com', 'first user', 'my first user haha', 'https://images.pexels.com/photos/320014/pexels-photo-320014.jpeg'), ('seconduser', 'cats123', 'seconduser@user.com', 'second user', 'my second user haha', 'https://images.pexels.com/photos/374906/pexels-photo-374906.jpeg'), ('thirduser', 'cats123', 'thirduser@user.com', 'third user', 'my third user haha', 'https://images.pexels.com/photos/789141/pexels-photo-789141.jpeg'), ('fourthuser', 'cats123', 'fourthuser@user.com', 'fourth user', 'my fourth user haha', 'https://images.pexels.com/photos/51964/humpback-whale-natural-spectacle-nature-mammal-51964.jpeg'), ('fifthuser', 'cats123', 'fifthuser@user.com', 'fifth user', 'my fifth user haha', 'https://images.pexels.com/photos/1376986/pexels-photo-1376986.jpeg'), ('sixthuser', 'cats123', 'sixthuser@user.com', 'sixth user', 'my sixth user haha', 'https://images.pexels.com/photos/247399/pexels-photo-247399.jpeg');
+INSERT INTO users(username, password_digest, email, name, about, profile_picture) VALUES ('cat', 'cats', 'cat@cat.com', 'first cat', 'my first cat haha', 'https://images.pexels.com/photos/320014/pexels-photo-320014.jpeg'), ('dog', 'dogs', 'dog@dog.com', 'second dog', 'my second dog haha', 'https://images.pexels.com/photos/374906/pexels-photo-374906.jpeg'), ('turtle', 'turtles', 'turtle@turtle.com', 'third turtle', 'my third turtle haha', 'https://images.pexels.com/photos/789141/pexels-photo-789141.jpeg'), ('whale', 'whales', 'whale@whale.com', 'fourth whale', 'my fourth whale haha', 'https://images.pexels.com/photos/51964/humpback-whale-natural-spectacle-nature-mammal-51964.jpeg'), ('owl', 'owls', 'owls@owl.com', 'fifth owl', 'my fifth owl haha', 'https://images.pexels.com/photos/1376986/pexels-photo-1376986.jpeg'), ('fox', 'foxes', 'fox@fox.com', 'sixth fox', 'my sixth fox haha', 'https://images.pexels.com/photos/247399/pexels-photo-247399.jpeg');
 
 INSERT INTO boards(user_id, name, description) VALUES (1, 'cats', 'you catta be kitten me'), (2, 'dogs', 'whats puppen'), (3, 'turtles', 'turtling peeps'), (4, 'whale', 'oh whale...'), (5, 'owl', 'Owl see you later'), (6, 'foxes', 'what the fox');
 

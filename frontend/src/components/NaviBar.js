@@ -1,31 +1,39 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { Component } from "react";
+import { Link, withRouter } from "react-router-dom";
 import "../css/navibar.css";
 
-const NaviBar = () => {
-  return (
-    <nav className="navi-bar">
-      <img
-        src="https://www.freeiconspng.com/uploads/white-pinterest-logo-on-black-16.png"
-        alt="logo"
-        className="posh-logo"
-      />
-      <div>
-        <input type="text" placeholder="Search" className="search-bar" />
-      </div>
-      <Link to="/" className="navi-links">
-        Home
-      </Link>
-      <Link to="/user" className="navi-links">
-        User Profile
-      </Link>
-      <Link to="/settings" className="navi-links">
-        •••
-      </Link>
-    </nav>
-  );
-};
+class NaviBar extends Component {
+  handleLogout = e => {
+    e.preventDefault();
+    this.props.logoutUser();
+  };
 
-export default NaviBar;
+  render() {
+    return (
+      <nav className="navi-bar">
+        <Link to="/home" className="navi-links">
+          <img
+            src="https://www.freeiconspng.com/uploads/white-pinterest-logo-on-black-16.png"
+            alt="logo"
+            className="posh-logo"
+          />
+        </Link>
+        <div>
+          <input type="text" placeholder="Search" className="search-bar" />
+        </div>
+        <Link to="/home" className="navi-links">
+          Home
+        </Link>
+        <Link to="/user" className="navi-links">
+          User
+        </Link>
+        <Link to="/settings" name="•••" className="navi-links">
+          •••
+        </Link>
+        <button onClick={this.handleLogout}>Log out</button>
+      </nav>
+    );
+  }
+}
 
-//edit link for settings!
+export default withRouter(NaviBar);

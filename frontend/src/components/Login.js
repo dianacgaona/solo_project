@@ -1,7 +1,26 @@
-import React, { Component } from 'react';
-import '../css/login.css';
+import React, { Component } from "react";
+import "../css/login.css";
 
 export default class Login extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: "",
+      password_digest: ""
+    };
+  }
+
+  handleChange = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  };
+
+  handleSubmit = e => {
+    e.preventDefault();
+    this.props.loginUser(this.state);
+  };
+
   render() {
     return (
       <div>
@@ -23,9 +42,13 @@ export default class Login extends Component {
                 Access Poshpin's best ideas with a free account
               </h3>
             </div>
-            <form>
+
+            <form onSubmit={this.handleSubmit}>
               <div className="input-container">
                 <input
+                  onChange={this.handleChange}
+                  name="email"
+                  value={this.state.email}
                   className="form-input"
                   type="text"
                   placeholder="Email or phone number"
@@ -34,8 +57,11 @@ export default class Login extends Component {
               </div>
               <div className="input-container">
                 <input
+                  onChange={this.handleChange}
+                  name="password_digest"
+                  value={this.state.password_digest}
                   className="form-input"
-                  type="text"
+                  type="password"
                   placeholder="Password"
                 />
               </div>
