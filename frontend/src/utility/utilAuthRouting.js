@@ -3,7 +3,7 @@ import { Route, Redirect, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import Auth from "./utilAuth";
 
-const Authorize = ({ component: Component, path, loggedIn }) => {
+const Authorized = ({ component: Component, path, loggedIn }) => {
   return (
     <Route
       path={path}
@@ -35,7 +35,7 @@ export const AuthRoute = withRouter(
   connect(
     mapStateToProps,
     null
-  )(Authorize)
+  )(Authorized)
 );
 
 export const ProtectedRoute = withRouter(

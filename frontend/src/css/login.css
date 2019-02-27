@@ -1,5 +1,9 @@
 .main-login {
   position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 /* background pins */
@@ -8,8 +12,6 @@
   display: flex;
   flex-direction: row;
   width: 1300px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .pin-div {
@@ -33,7 +35,8 @@
   right: 0;
   bottom: 0;
   min-height: 100%;
-  z-index: 0;
+  /* z-index: 8; */
+  width: auto;
 }
 
 /* button to toggle between signup and login */
@@ -48,5 +51,6 @@
   right: 154px;
   bottom: 88px;
   left: 24px;
-  z-index: 5;
+  z-index: 2;
+  cursor: pointer;
 }

@@ -1,17 +1,18 @@
-import { connect } from 'react-redux';
-import NaviBar from './NaviBar.js';
-import { logoutUser } from '../actions/actionSession.js';
+import { connect } from "react-redux";
+import NaviBar from "./NaviBar.js";
+import { logoutUser } from "../actions/actionSession.js";
 
 const mapStateToProps = state => {
+  // debugger;
   return {
-    email: state.email,
+    currentUser: state.session.currentUser
   };
 };
 
 const mapDispatchToProps = dispatch => {
   // debugger;
   return {
-    logoutUser: () => dispatch(logoutUser()),
+    logoutUser: () => dispatch(logoutUser())
   };
 };
 

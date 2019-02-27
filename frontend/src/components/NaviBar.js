@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 import "../css/navibar.css";
+import "../assets/poshpin-logo.png";
 
 class NaviBar extends Component {
   handleLogout = e => {
@@ -8,12 +9,19 @@ class NaviBar extends Component {
     this.props.logoutUser();
   };
 
+  // <img
+  //   src="https://www.freeiconspng.com/uploads/white-pinterest-logo-on-black-16.png"
+  //   alt="logo"
+  //   className="posh-logo"
+  // />
+
   render() {
+    // debugger;
     return (
       <nav className="navi-bar">
         <Link to="/home" className="navi-links">
           <img
-            src="https://www.freeiconspng.com/uploads/white-pinterest-logo-on-black-16.png"
+            src="../assets/poshpin-logo.png"
             alt="logo"
             className="posh-logo"
           />
@@ -25,11 +33,9 @@ class NaviBar extends Component {
           Home
         </Link>
         <Link to="/user" className="navi-links">
-          User
+          {this.props.currentUser.name}
         </Link>
-        <Link to="/settings" name="•••" className="navi-links">
-          •••
-        </Link>
+
         <button onClick={this.handleLogout}>Log out</button>
       </nav>
     );

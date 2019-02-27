@@ -1,7 +1,7 @@
-import { RECEIVE_PINS } from "../actions/actionPins";
+import { RECEIVE_PINS } from '../actions/actionPins';
 // import merge from "lodash/merge";
 
-export const pinsReducer = (oldState = [], action) => {
+export const pinsReducer = (oldState = {}, action) => {
   // debugger;
   Object.freeze(oldState);
   switch (action.type) {

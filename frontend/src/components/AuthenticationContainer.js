@@ -1,15 +1,15 @@
-import { connect } from "react-redux";
-import UserAuthentication from "./UserAuthentication";
-import { fetchAllPins } from "../actions/actionPins";
-import { toggleForms } from "../actions/actionAuthentication";
-import { newUser, loginUser } from "../actions/actionSession";
+import { connect } from 'react-redux';
+import UserAuthentication from './UserAuthentication';
+import { fetchAllPins } from '../actions/actionPins';
+import { toggleForms } from '../actions/actionAuthentication';
+import { newUser, loginUser } from '../actions/actionSession';
 
 const mapStateToProps = state => {
   console.log(state);
   return {
     toggle: state.toggle,
-    pins: state.pins,
-    currentUser: state.session.currentUser
+    pins: Object.values(state.pins),
+    currentUser: state.session.currentUser,
   };
 };
 
@@ -19,7 +19,7 @@ const mapDispatchToProps = dispatch => {
     toggleButton: () => dispatch(toggleForms()),
     fetchAllPins: () => dispatch(fetchAllPins()),
     newUser: user => dispatch(newUser(user)),
-    loginUser: user => dispatch(loginUser(user))
+    loginUser: user => dispatch(loginUser(user)),
   };
 };
 

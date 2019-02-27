@@ -17,6 +17,7 @@
 .parent-div-pin {
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
   flex-wrap: wrap;
   width: 1300px;
   margin-left: auto;

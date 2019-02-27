@@ -1,12 +1,11 @@
-import * as session from '../utility/utilSession';
-import Auth from '../utility/utilAuth.js';
+import * as session from "../utility/utilSession";
+import Auth from "../utility/utilAuth.js";
 
-export let RECEIVE_USER = 'RECEIVE_USER';
-
+export let RECEIVE_USER = "RECEIVE_USER";
 export const receiveUser = user => {
   return {
     type: RECEIVE_USER,
-    user: user,
+    user: user
   };
 };
 
@@ -21,7 +20,7 @@ export const loginUser = user => dispatch => {
     .loginUser(user)
     .then(response => {
       Auth.authenticateUser(response.data.email);
-      return dispatch(receiveUser(response.data.email));
+      return dispatch(receiveUser(response.data));
     })
     .catch(err => {
       Auth.deauthenticateUser();
