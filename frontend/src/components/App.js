@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
-import HomeContainer from './components/HomeContainer';
-import AuthenticationContainer from './components/AuthenticationContainer.js';
-import { AuthRoute, ProtectedRoute } from './utility/utilAuthRouting.js';
+import HomeContainer from './HomeContainer';
+import AuthenticationContainer from './AuthenticationContainer.js';
+import { AuthRoute, ProtectedRoute } from '../utility/utilAuthRouting.js';
 import { Switch } from 'react-router-dom';
 // import Auth from "./utility/utilAuth";
 
-import './css/App.css';
+import '../css/App.css';
 
 class App extends Component {
+  componentDidMount() {
+    this.props.checkAuthStatus();
+  }
+
   render() {
+    console.log(this.props, 'the app');
     return (
       <div className="App">
         <Switch>

@@ -8,4 +8,24 @@ export const PinList = ({ pins }) =>
     </div>
   ));
 
-//for implicit return, you can't put a debugger (can't put a debugger in a return statement)
+//for implicit return, you can't put a debugger for an implicit return
+
+// .parentImageDiv {
+//   line-height: 0;
+//    -webkit-column-count: 5;
+//    -webkit-column-gap: 0px;
+//    -moz-column-count: 5;
+//    -moz-column-gap: 0px;
+//     column-count: 5;
+//     column-gap: 0px;
+// }
+// .parentImageDiv img {
+//    margin-top:15px;
+//   width: 100% !important;
+//   height: auto !important;
+// }
+// .parentImageDiv{
+//   display:inline-block;
+//   margin-right: auto;
+//   margin-left: auto;
+// }

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../css/login.css";
+import "../css/session.css";
 
 export default class Login extends Component {
   constructor(props) {
@@ -31,11 +31,11 @@ export default class Login extends Component {
               <img
                 src="https://www.freeiconspng.com/uploads/white-pinterest-logo-on-black-16.png"
                 alt="logo"
-                className="login-logo"
+                className="session-logo"
               />
             </div>
-            <div className="login-container">
-              <h3 className="login-signup">Log in to see more</h3>
+            <div className="session-container">
+              <h3 className="session-signup">Log in to see more</h3>
             </div>
             <div className="text-container">
               <h3 className="form-text">
@@ -66,9 +66,9 @@ export default class Login extends Component {
                 />
               </div>
               <br />
-              <button type="submit">Log in</button>
-              <br />
-              <span>Not on Poshpin Yet? Sign Up</span>
+              <button type="submit" className="form-button">
+                Log in
+              </button>
             </form>
           </div>
         </div>

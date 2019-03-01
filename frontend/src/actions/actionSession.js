@@ -38,3 +38,16 @@ export const logoutUser = () => dispatch => {
       Auth.deauthenticateUser();
     });
 };
+
+export const checkAuthStatus = user => dispatch => {
+  return session
+    .isLoggedIn(user)
+    .then(user => {
+      if (user.data.email.email === Auth.getToken(user)) {
+        return dispatch(receiveUser(user.data.email));
+      }
+    })
+    .catch(err => {
+      Auth.deauthenticateUser();
+    });
+};

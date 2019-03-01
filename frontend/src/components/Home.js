@@ -12,6 +12,7 @@ export default class Home extends Component {
 
   render() {
     // debugger;
+    if (!this.props.pins.length) return null;
     return (
       <div>
         <NaviBarContainer />

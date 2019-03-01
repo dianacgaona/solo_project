@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import LogIn from "./Login";
-import SignUp from "./SignUp";
-import "../css/login.css";
-import "../css/form.css";
+import React, { Component } from 'react';
+import LogIn from './Login';
+import SignUp from './SignUp';
+import '../css/session.css';
+import '../css/form.css';
 
 // import { PinList } from './PinList';
 
@@ -26,7 +26,7 @@ class UserAuthentication extends Component {
   };
 
   render() {
-    console.log(this.props, "redux");
+    console.log(this.props, 'redux');
     return (
       <div className="main-login">
         <div className="parent-div-pin">{this.displayPins()}</div>

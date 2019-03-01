@@ -1,19 +1,19 @@
-import React, { Component } from 'react';
-import '../css/login.css';
+import React, { Component } from "react";
+import "../css/session.css";
 
 export default class SignUp extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: '',
-      password_digest: '',
-      name: '',
+      email: "",
+      password_digest: "",
+      name: ""
     };
   }
 
   handleChange = e => {
     this.setState({
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value
     });
   };
 
@@ -22,7 +22,7 @@ export default class SignUp extends Component {
     this.props.newUser(this.state).then(() => {
       this.props.loginUser({
         email: this.state.email,
-        password_digest: this.state.password_digest,
+        password_digest: this.state.password_digest
       });
     });
   };
@@ -37,11 +37,11 @@ export default class SignUp extends Component {
               <img
                 src="https://www.freeiconspng.com/uploads/white-pinterest-logo-on-black-16.png"
                 alt="logo"
-                className="login-logo"
+                className="session-logo"
               />
             </div>
-            <div className="login-container">
-              <h3 className="login-signup">Sign up to see more</h3>
+            <div className="session-container">
+              <h3 className="session-signup">Sign up to see more</h3>
             </div>
             <div className="text-container">
               <h3 className="form-text">
@@ -82,9 +82,9 @@ export default class SignUp extends Component {
                 />
               </div>
               <br />
-              <button type="submit">Continue</button>
-              <br />
-              <span>Already a member? Log in</span>
+              <button type="submit" className="form-button">
+                Continue
+              </button>
             </form>
           </div>
         </div>

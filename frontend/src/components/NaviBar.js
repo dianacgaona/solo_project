@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 import "../css/navibar.css";
-import "../assets/poshpin-logo.png";
+import logo from "../assets/poshpin-logo.png";
+import search_logo from "../assets/800px-magnify-glass.svg.png";
 
 class NaviBar extends Component {
   handleLogout = e => {
@@ -9,37 +10,42 @@ class NaviBar extends Component {
     this.props.logoutUser();
   };
 
-  // <img
-  //   src="https://www.freeiconspng.com/uploads/white-pinterest-logo-on-black-16.png"
-  //   alt="logo"
-  //   className="posh-logo"
-  // />
-
   render() {
-    // debugger;
+    if (!this.props.currentUser.name) return null;
     return (
       <nav className="navi-bar">
-        <Link to="/home" className="navi-links">
-          <img
-            src="../assets/poshpin-logo.png"
-            alt="logo"
-            className="posh-logo"
-          />
-        </Link>
-        <div>
+        <div className="posh-logo-div">
+          <Link to="/home">
+            <img src={logo} alt="logo" className="posh-logo " />
+          </Link>
+        </div>
+
+        <div className="navi-search">
+          <div className="search-logo-div">
+            <img src={search_logo} alt="glass" className="search-logo" />
+          </div>
           <input type="text" placeholder="Search" className="search-bar" />
         </div>
-        <Link to="/home" className="navi-links">
-          Home
-        </Link>
-        <Link to="/user" className="navi-links">
-          {this.props.currentUser.name}
-        </Link>
 
-        <button onClick={this.handleLogout}>Log out</button>
+        <div className="links-div">
+          <Link to="/home" className="navi-links">
+            Home
+          </Link>
+          <Link to="/user" className="navi-links">
+            user
+          </Link>
+          <button
+            type="button"
+            onClick={this.handleLogout}
+            className="navi-button new-label"
+          >
+            Log out
+          </button>
+        </div>
       </nav>
     );
   }
 }
+//GOES INSIDE THE USER LINK => {this.props.currentUser.name}
 
 export default withRouter(NaviBar);
