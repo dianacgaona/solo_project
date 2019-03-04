@@ -1,19 +1,19 @@
-import React, { Component } from "react";
-import "../css/session.css";
+import React, { Component } from 'react';
+import '../../css/session.css';
 
 export default class SignUp extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: "",
-      password_digest: "",
-      name: ""
+      email: '',
+      password_digest: '',
+      name: '',
     };
   }
 
   handleChange = e => {
     this.setState({
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -22,7 +22,7 @@ export default class SignUp extends Component {
     this.props.newUser(this.state).then(() => {
       this.props.loginUser({
         email: this.state.email,
-        password_digest: this.state.password_digest
+        password_digest: this.state.password_digest,
       });
     });
   };

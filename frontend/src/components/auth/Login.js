@@ -1,18 +1,18 @@
-import React, { Component } from "react";
-import "../css/session.css";
+import React, { Component } from 'react';
+import '../../css/session.css';
 
 export default class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: "",
-      password_digest: ""
+      email: '',
+      password_digest: '',
     };
   }
 
   handleChange = e => {
     this.setState({
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 

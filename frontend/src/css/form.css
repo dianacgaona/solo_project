@@ -1,18 +1,5 @@
 /* form div */
 
-/* .form-div {
-  width: 440px;
-  height: 500px;
-  background-color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  flex-direction: column;
-  padding: 20px 10px;
-} */
-
 .form-div {
   margin-top: 50px;
   display: flex;

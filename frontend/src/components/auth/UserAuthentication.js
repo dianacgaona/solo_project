@@ -1,16 +1,10 @@
 import React, { Component } from 'react';
 import LogIn from './Login';
 import SignUp from './SignUp';
-import '../css/session.css';
-import '../css/form.css';
-
-// import { PinList } from './PinList';
+import '../../css/session.css';
+import '../../css/form.css';
 
 class UserAuthentication extends Component {
-  // constructor(props) {
-  //   super(props);
-  // }
-
   componentDidMount() {
     this.props.fetchAllPins();
   }

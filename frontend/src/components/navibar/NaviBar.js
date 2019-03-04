@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
-import "../css/navibar.css";
-import logo from "../assets/poshpin-logo.png";
-import search_logo from "../assets/800px-magnify-glass.svg.png";
+import "../../css/navibar.css";
+import logo from "../../assets/poshpin-logo.png";
+import search_logo from "../../assets/800px-magnify-glass.svg.png";
 
 class NaviBar extends Component {
   handleLogout = e => {
