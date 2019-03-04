@@ -83,26 +83,29 @@ const loginUser = (req, res) => {
 
 const isLoggedIn = (req, res) => {
   if (req.user) {
-    res.json({ email: req.user });
+    res.json({
+      id: req.user.id,
+      name: req.user.name,
+      email: req.user.email
+    });
   } else {
     res.json({ email: null });
   }
 };
-
-// function isLoggedIn(req, res) {
+//
+// const isLoggedIn = (req, res) => {
 //   if (req.user) {
-//     db.one('SELECT * FROM users WHERE email=${email}', {
-//       email: req.user,
-//     }).then(user => {
-//       res.status(200).json({
-//         user,
+//     db.one("SELECT * FROM USERS WHERE email=$1", [req.user]).then(user => {
+//       res.json({
+//         id: user.id,
+//         name: user.name,
+//         email: user.email
 //       });
 //     });
-//     res.json({ username: req.user });
 //   } else {
-//     res.json({ username: null });
+//     res.json({ email: null });
 //   }
-// }
+// };
 
 module.exports = {
   getAllUsers,

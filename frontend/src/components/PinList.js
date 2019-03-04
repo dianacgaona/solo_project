@@ -1,5 +1,5 @@
-import React from "react";
-import "../css/App.css";
+import React from 'react';
+// import "../css/App.css";
 
 export const PinList = ({ pins }) =>
   pins.map(pin => (

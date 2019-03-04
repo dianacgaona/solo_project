@@ -11,8 +11,8 @@ class NaviBar extends Component {
   };
 
   render() {
-    if (!this.props.currentUser.name) return null;
-    return (
+    console.log(this.props.currentUser);
+    return this.props.currentUser ? (
       <nav className="navi-bar">
         <div className="posh-logo-div">
           <Link to="/home">
@@ -32,7 +32,7 @@ class NaviBar extends Component {
             Home
           </Link>
           <Link to="/user" className="navi-links">
-            user
+            {this.props.currentUser.name}
           </Link>
           <button
             type="button"
@@ -43,7 +43,7 @@ class NaviBar extends Component {
           </button>
         </div>
       </nav>
-    );
+    ) : null;
   }
 }
 //GOES INSIDE THE USER LINK => {this.props.currentUser.name}

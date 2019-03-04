@@ -41,10 +41,11 @@ export const logoutUser = () => dispatch => {
 
 export const checkAuthStatus = user => dispatch => {
   return session
-    .isLoggedIn(user)
+    .isLoggedIn()
     .then(user => {
-      if (user.data.email.email === Auth.getToken(user)) {
-        return dispatch(receiveUser(user.data.email));
+      // debugger;
+      if (user.data.email === Auth.getToken()) {
+        return dispatch(receiveUser(user.data));
       }
     })
     .catch(err => {
