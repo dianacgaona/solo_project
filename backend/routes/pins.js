@@ -1,8 +1,9 @@
 const express = require("express");
 const router = express.Router();
 
-const { getAllPins } = require("../db/queries/pinsQueries");
+const { getAllPins, getSinglePin } = require("../db/queries/pinsQueries");
 
 router.get("/", getAllPins);
+router.get("/:id", getSinglePin);
 
 module.exports = router;

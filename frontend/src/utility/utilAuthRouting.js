@@ -1,14 +1,15 @@
-import React from "react";
-import { Route, Redirect, withRouter } from "react-router-dom";
-import { connect } from "react-redux";
-import Auth from "./utilAuth";
+import React from 'react';
+import { Route, Redirect, withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+import Auth from './utilAuth';
 
 const Authorized = ({ component: Component, path, loggedIn }) => {
   return (
     <Route
+      exact
       path={path}
       render={props =>
-        !loggedIn ? <Component {...props} /> : <Redirect to={"/home"} />
+        !loggedIn ? <Component {...props} /> : <Redirect to={'/home'} />
       }
     />
   );
@@ -19,7 +20,7 @@ const Protected = ({ component: Component, path, loggedIn }) => {
     <Route
       path={path}
       render={props =>
-        loggedIn ? <Component {...props} /> : <Redirect to={"/"} />
+        loggedIn ? <Component {...props} /> : <Redirect to={'/'} />
       }
     />
   );
@@ -27,7 +28,7 @@ const Protected = ({ component: Component, path, loggedIn }) => {
 
 const mapStateToProps = state => {
   return {
-    loggedIn: Auth.isUserAuthenticated()
+    loggedIn: Auth.isUserAuthenticated(),
   };
 };
 

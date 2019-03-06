@@ -31,7 +31,10 @@ class NaviBar extends Component {
           <Link to="/home" className="navi-links">
             Home
           </Link>
-          <Link to="/user" className="navi-links">
+          <Link
+            to={`/user/${this.props.currentUser.id}`}
+            className="navi-links"
+          >
             {this.props.currentUser.name}
           </Link>
           <button

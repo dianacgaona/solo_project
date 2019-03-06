@@ -1,6 +1,6 @@
-import { RECEIVE_PINS } from "../actions/actionPins";
-import { RECEIVE_ONE_PIN } from "../actions/actionPins";
-import merge from "lodash/merge";
+import { RECEIVE_PINS } from '../actions/actionPins';
+import { RECEIVE_ONE_PIN } from '../actions/actionPins';
+import merge from 'lodash/merge';
 
 export const pinsReducer = (oldState = {}, action) => {
   // debugger;

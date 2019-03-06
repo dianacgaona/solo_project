@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
-import PinListContainer from '../pins/PinListContainer';
-import NaviBarContainer from '../navibar/NaviBarContainer';
-import '../../css/App.css';
+import React, { Component } from "react";
+import PinListContainer from "../pins/PinListContainer";
+import "../../css/App.css";
 
 export default class Home extends Component {
   state = {};
@@ -14,7 +13,6 @@ export default class Home extends Component {
     // debugger;
     return (
       <div>
-        <NaviBarContainer />
         <PinListContainer />
       </div>
     );
