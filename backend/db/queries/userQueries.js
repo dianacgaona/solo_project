@@ -1,14 +1,14 @@
-const { db } = require("../index.js");
+const { db } = require('../index.js');
 
-const authHelpers = require("../../auth/helpers");
+const authHelpers = require('../../auth/helpers');
 
 const getAllUsers = (req, res, next) => {
-  db.any("SELECT * FROM users")
+  db.any('SELECT * FROM users')
     .then(users => {
       res.status(200).json({
-        status: "success",
+        status: 'success',
         users: users,
-        message: "users received"
+        message: 'users received',
       });
     })
     .catch(error => {
@@ -18,12 +18,12 @@ const getAllUsers = (req, res, next) => {
 
 const getSingleUser = (req, res, next) => {
   let userId = parseInt(req.params.id);
-  db.any("SELECT * FROM users WHERE id=$1", [userId])
+  db.any('SELECT * FROM users WHERE id=$1', [userId])
     .then(user => {
       res.status(200).json({
-        status: "success",
+        status: 'success',
         user: user,
-        message: "User received"
+        message: 'User received',
       });
     })
     .catch(error => {
@@ -33,12 +33,12 @@ const getSingleUser = (req, res, next) => {
 
 const deleteUser = (req, res, next) => {
   let userId = parseInt(req.params.id);
-  db.result("DELETE FROM users WHERE id=$1", userId)
+  db.result('DELETE FROM users WHERE id=$1', userId)
     .then(result => {
       res.status(200).json({
-        status: "success",
-        message: "User down",
-        result: result
+        status: 'success',
+        message: 'User down',
+        result: result,
       });
     })
     .catch(error => {
@@ -49,35 +49,38 @@ const deleteUser = (req, res, next) => {
 const createUser = (req, res, next) => {
   const hash = authHelpers.createHash(req.body.password_digest);
   db.none(
-    "INSERT INTO users ( email, password_digest, name) VALUES (${email}, ${password_digest}, ${name})",
+    'INSERT INTO users ( email, password_digest, name) VALUES (${email}, ${password_digest}, ${name})',
     {
       email: req.body.email,
       password_digest: hash,
-      name: req.body.name
+      name: req.body.name,
     }
   )
     .then(() => {
       res.status(200).json({
-        mesage: "Registration successful!"
+        mesage: 'Registration successful!',
       });
     })
     .catch(error => {
       res.status(500).json({
-        message: error
+        message: error,
       });
     });
 };
 
 const logoutUser = (req, res, next) => {
   req.logout();
-  res.status(200).send("logout success");
+  res.status(200).send('logout success');
 };
 
 const loginUser = (req, res) => {
   res.json({
     id: req.user.id,
     name: req.user.name,
-    email: req.user.email
+    email: req.user.email,
+    username: req.user.username,
+    about: req.user.about,
+    profile_pic: req.user.profile_picture,
   });
 };
 
@@ -86,7 +89,10 @@ const isLoggedIn = (req, res) => {
     res.json({
       id: req.user.id,
       name: req.user.name,
-      email: req.user.email
+      email: req.user.email,
+      username: req.user.username,
+      about: req.user.about,
+      profile_pic: req.user.profile_picture,
     });
   } else {
     res.json({ email: null });
@@ -114,18 +120,18 @@ module.exports = {
   createUser,
   logoutUser,
   loginUser,
-  isLoggedIn
+  isLoggedIn,
 };
 
 // const updateUser = (req, res, next) => {
 //   db
 //     .none(
-//       "UPDATE users SET name=${name}, username=${username}, email=${email}, profile_pic_url=${profile_pic_url} WHERE id=${id}",
+//       "UPDATE users SET name=${name}, username=${username}, email=${email}, profile_picture=${profile_picture} WHERE id=${id}",
 //       {
 //         name: req.body.name,
 //         username: req.body.username,
 //         email: req.body.email,
-//         profile_pic_url: req.body.profile_pic_url,
+//         profile_picture: req.body.profile_picture,
 //         id: parseInt(req.params.id)
 //       }
 //     )

@@ -1,0 +1,23 @@
+.parent-div-pin {
+  margin: 0 70px;
+  padding: 24px 0;
+  background-color: transparent;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pins {
+  width: 236px;
+  height: auto;
+  border-radius: 20px;
+  padding: 8px;
+}
+.pins:hover {
+  padding: 8px;
+  background-color: #d3d3d3;
+}
+
+.pin-div {
+  padding: 6px;
+  margin: -3px;
+}

@@ -1,3 +1,7 @@
+.App {
+  text-align: center;
+}
+
 .main-login {
   position: fixed;
   top: 0;
@@ -8,16 +12,12 @@
 
 /* background pins */
 
-.parent-div-pin {
+/* .parent-div-pin {
+  margin: 0 70px;
+  padding: 24px 0;
+  background-color: transparent;
   display: flex;
-  /* flex-direction: row; */
-  width: 1300px;
-  align-content: stretch;
-}
-
-.pin-div {
-  padding: 8px;
-  margin: -3px;
+  flex-wrap: wrap;
 }
 
 .pins {
@@ -25,6 +25,11 @@
   height: auto;
   border-radius: 10px;
 }
+
+.pin-div {
+  padding: 15px;
+  margin: -3px;
+} */
 
 /* transparent div with form and button */
 

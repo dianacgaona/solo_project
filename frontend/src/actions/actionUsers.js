@@ -10,7 +10,12 @@ export const receiveOneUser = user => {
 };
 
 export const fetchOneUser = id => dispatch => {
-  return usersApi.fetchOneUser(id).then(res => {
-    return dispatch(receiveOneUser(res.data.user));
-  });
+  return usersApi
+    .fetchOneUser(id)
+    .then(res => {
+      return dispatch(receiveOneUser(res.data.user));
+    })
+    .catch(error => {
+      console.log(error);
+    });
 };

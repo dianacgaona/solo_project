@@ -1,0 +1,90 @@
+.profile-background {
+}
+
+.add-edit-div {
+  margin-top: 5px;
+  background-color: transparent;
+  height: 72px;
+  width: 100%;
+  top: 65px;
+}
+
+.add-edit-inner-div {
+  width: 800px;
+  height: 65px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.add-icon {
+  width: 26px;
+  height: 26px;
+}
+
+.name-pic-div {
+  width: 800px;
+  height: 170px;
+  background-color: transparent;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-name {
+  color: #333;
+  font-size: 36px;
+  font-weight: 600;
+  font-family: sans-serif;
+  margin-left: 20px;
+}
+
+.pic-div {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50px;
+  margin-right: 40px;
+}
+
+.profile-pic {
+  width: 106px;
+  height: 106px;
+  object-fit: cover;
+}
+
+.selector-div {
+  width: 100%;
+  height: 44px;
+}
+
+.selector-inner-div {
+  width: 800px;
+  height: 44px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.selector-link {
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #8e8e8e;
+  margin: 0 15px;
+  padding: 10px;
+}
+
+.selector-link:hover {
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #efefef;
+}
+
+.display-div {
+  background-color: #efefef;
+  height: 100vh;
+}

@@ -1,11 +1,12 @@
-import * as session from "../utility/utilSession";
-import Auth from "../utility/utilAuth.js";
+import * as session from '../utility/utilSession';
+import Auth from '../utility/utilAuth.js';
 
-export let RECEIVE_USER = "RECEIVE_USER";
+export let RECEIVE_USER = 'RECEIVE_USER';
+
 export const receiveUser = user => {
   return {
     type: RECEIVE_USER,
-    user: user
+    user: user,
   };
 };
 

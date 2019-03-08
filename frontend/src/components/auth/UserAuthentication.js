@@ -24,6 +24,7 @@ class UserAuthentication extends Component {
     return (
       <div className="main-login">
         <div className="parent-div-pin">{this.displayPins()}</div>
+
         {!this.props.toggle ? (
           <div>
             <button className="toggle-button" onClick={this.props.toggleButton}>

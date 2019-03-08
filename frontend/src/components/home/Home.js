@@ -1,6 +1,7 @@
-import React, { Component } from "react";
-import PinListContainer from "../pins/PinListContainer";
-import "../../css/App.css";
+import React, { Component } from 'react';
+import PinListContainer from '../pins/PinListContainer';
+import '../../css/pins.css';
+import '../../css/home.css';
 
 export default class Home extends Component {
   state = {};
@@ -12,7 +13,7 @@ export default class Home extends Component {
   render() {
     // debugger;
     return (
-      <div>
+      <div className="home-div">
         <PinListContainer />
       </div>
     );

@@ -11,7 +11,6 @@ class NaviBar extends Component {
   };
 
   render() {
-    console.log(this.props.currentUser);
     return this.props.currentUser ? (
       <nav className="navi-bar">
         <div className="posh-logo-div">
@@ -37,6 +36,7 @@ class NaviBar extends Component {
           >
             {this.props.currentUser.name}
           </Link>
+
           <button
             type="button"
             onClick={this.handleLogout}
@@ -49,6 +49,5 @@ class NaviBar extends Component {
     ) : null;
   }
 }
-//GOES INSIDE THE USER LINK => {this.props.currentUser.name}
 
 export default withRouter(NaviBar);

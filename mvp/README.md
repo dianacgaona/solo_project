@@ -1,4 +1,4 @@
-# Cloneterest
+# Poshpin
 
 [Trello][trello]
 
@@ -6,7 +6,7 @@
 
 # Minimum Viable Product
 
-Cloneterest is a clone of Pinterest I built using JavaScript and React/Redux.
+Poshpin is a clone of Pinterest I built using JavaScript and React/Redux.
 
 In a month period, this app will, at the least, do the following:
 
