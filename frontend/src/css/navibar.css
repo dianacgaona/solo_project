@@ -87,6 +87,26 @@
   border-radius: 100px;
 }
 
+.pic-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.user-pic-div {
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  border-radius: 50px;
+  margin-right: 5px;
+}
+
+.user-pic {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
+
 .navi-button {
   color: #8e8e8e;
   height: 40px;

@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import '../../css/session.css';
-import '../../css/pins.css';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import "../../css/session.css";
+import "../../css/pins.css";
 
 class PinList extends Component {
   displayAllPins = () => {

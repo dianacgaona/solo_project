@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://localhost:3000/allSongs -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="shortcut icon" href="http://localhost:3000/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  <style type="text/css">.navi_bar {
+  height: 75px;
+  width: 100%;
+  background-color: salmon;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-align-items: center;
+          align-items: center;
+}
+
+.navi_bar a {
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  /* font-weight: 500; */
+}
+
+.navi_left {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-evenly;
+          justify-content: space-evenly;
+  width: 50%;
+}
+
+.navi_right {
+  width: 30%;
+  margin-left: 50px;
+  font-weight: bold;
+}
+</style><style type="text/css">html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+p,
+a,
+img,
+ol,
+ul,
+li,
+form,
+label,
+nav {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: sans-serif;
+  vertical-align: baseline;
+}
+
+body {
+  background-color: #621389;
+}
+
+.main_container {
+  height: 100%;
+  background-color: #d1d1d1;
+  padding-top: 10px;
+  width: 80%;
+  margin: 5px auto;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+          align-items: center;
+}
+
+.home_text {
+  font-size: 50px;
+  height: 100vh;
+  padding-top: 50px;
+}
+</style><style type="text/css">.form_div {
+  width: 80%;
+  height: 90px;
+  /* background-color: beige; */
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+          align-items: center;
+  padding: 5px;
+}
+
+.page_title {
+  font-size: 25px;
+  padding-bottom: 5px;
+}
+
+.form_input {
+  width: 500px;
+  height: 30px;
+  font-size: 16px;
+  margin-right: 10px;
+  padding-left: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+.form_button {
+  height: 30px;
+  width: 120px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+}
+
+.songs_maindiv {
+  width: 80%;
+  background-color: #d1d1db;
+}
+
+.songs_container {
+  display: -webkit-flex;
+  display: flex;
+  padding: 5px;
+}
+
+.songs_left {
+  padding: 10px;
+}
+
+.songs_img {
+  width: 200px;
+  height: auto;
+}
+
+.songs_right {
+  padding: 10px;
+}
+
+.songs_title {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-align-items: center;
+          align-items: center;
+  height: 30px;
+  width: 650px;
+}
+
+.songs_favorite {
+  display: -webkit-flex;
+  display: flex;
+}
+
+.songs_poster {
+  display: -webkit-flex;
+  display: flex;
+  padding: 0 5px 10px;
+}
+
+.songs_separator {
+  padding: 0 5px;
+}
+
+.songs_comments {
+  background-color: pink;
+  height: 30px;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.songs_form {
+}
+</style></head>
+  <body class="vsc-initialized" cz-shortcut-listen="true">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><div class="App"><nav class="navi_bar"><div class="navi_right"><a aria-current="page" class="active" href="http://localhost:3000/">Earworm Report</a></div><div class="navi_left"><a aria-current="page" class="active" href="http://localhost:3000/"> Home </a><a aria-current="page" class="active" href="http://localhost:3000/allSongs"> All Songs </a><a href="http://localhost:3000/songs/bypop"> By Popularity </a><a href="http://localhost:3000/songs/bygenre"> By Genre </a><a href="http://localhost:3000/users/1"> My Profile </a></div></nav><div class="main_container"><div class="form_div"><h2 class="page_title">Search By Title</h2><form class="form"><input type="text" name="search" placeholder="Title" class="form_input" value=""><button class="form_button">Search</button></form></div><div class="songs_maindiv"><div><div class="main_container"><div>Songs</div><div><a href="http://localhost:3000/users/10"> rhymesguy was here</a><p>Great vibes!</p></div><div><a href="http://localhost:3000/users/10"> rhymesguy was here</a><p>Who is the artist?</p></div><div><a href="http://localhost:3000/users/9"> airmusic was here</a><p>Loving the guitar</p></div><div><a href="http://localhost:3000/users/9"> airmusic was here</a><p>Take me back to my childhood</p></div><div><a href="http://localhost:3000/users/8"> joe123 was here</a><p>Love the song</p></div><div><a href="http://localhost:3000/users/8"> joe123 was here</a><p>Just my style</p></div><div><a href="http://localhost:3000/users/7"> hipgal was here</a><p>Listening to this in 2019</p></div><div><a href="http://localhost:3000/users/7"> hipgal was here</a><p>Helps me do my hw XD</p></div><div><a href="http://localhost:3000/users/6"> music247 was here</a><p>@doge You will like this</p></div><div><a href="http://localhost:3000/users/5"> djmusik was here</a><p>This has been my song for years</p></div><div><a href="http://localhost:3000/users/5"> djmusik was here</a><p>Here for the artist</p></div><div><a href="http://localhost:3000/users/4"> carl123 was here</a><p>Passing by. Sup peeps!</p></div><div><a href="http://localhost:3000/users/4"> carl123 was here</a><p>Who came here because of that new show that no one cares about? Me too.</p></div><div><a href="http://localhost:3000/users/3"> k-indie was here</a><p>Song to get through the day</p></div><div><a href="http://localhost:3000/users/3"> k-indie was here</a><p>Feeling the beat</p></div></div><div class="main_container"><div>Songs</div><div><a href="http://localhost:3000/users/10"> rhymesguy was here</a><p>Great vibes!</p></div><div><a href="http://localhost:3000/users/10"> rhymesguy was here</a><p>Who is the artist?</p></div><div><a href="http://localhost:3000/users/9"> airmusic was here</a><p>Loving the guitar</p></div><div><a href="http://localhost:3000/users/9"> airmusic was here</a><p>Take me back to my childhood</p></div><div><a href="http://localhost:3000/users/8"> joe123 was here</a><p>Love the song</p></div><div><a href="http://localhost:3000/users/8"> joe123 was here</a><p>Just my style</p></div><div><a href="http://localhost:3000/users/7"> hipgal was here</a><p>Listening to this in 2019</p></div><div><a href="http://localhost:3000/users/7"> hipgal was here</a><p>Helps me do my hw XD</p></div><div><a href="http://localhost:3000/users/6"> music247 was here</a><p>@doge You will like this</p></div><div><a href="http://localhost:3000/users/5"> djmusik was here</a><p>This has been my song for years</p></div><div><a href="http://localhost:3000/users/5"> djmusik was here</a><p>Here for the artist</p></div><div><a href="http://localhost:3000/users/4"> carl123 was here</a><p>Passing by. Sup peeps!</p></div><div><a href="http://localhost:3000/users/4"> carl123 was here</a><p>Who came here because of that new show that no one cares about? Me too.</p></div><div><a href="http://localhost:3000/users/3"> k-indie was here</a><p>Song to get through the day</p></div><div><a href="http://localhost:3000/users/3"> k-indie was here</a><p>Feeling the beat</p></div></div><div class="main_container"><div>Songs</div><div><a href="http://localhost:3000/users/10"> rhymesguy was here</a><p>Great vibes!</p></div><div><a href="http://localhost:3000/users/10"> rhymesguy was here</a><p>Who is the artist?</p></div><div><a href="http://localhost:3000/users/9"> airmusic was here</a><p>Loving the guitar</p></div><div><a href="http://localhost:3000/users/9"> airmusic was here</a><p>Take me back to my childhood</p></div><div><a href="http://localhost:3000/users/8"> joe123 was here</a><p>Love the song</p></div><div><a href="http://localhost:3000/users/8"> joe123 was here</a><p>Just my style</p></div><div><a href="http://localhost:3000/users/7"> hipgal was here</a><p>Listening to this in 2019</p></div><div><a href="http://localhost:3000/users/7"> hipgal was here</a><p>Helps me do my hw XD</p></div><div><a href="http://localhost:3000/users/6"> music247 was here</a><p>@doge You will like this</p></div><div><a href="http://localhost:3000/users/5"> djmusik was here</a><p>This has been my song for years</p></div><div><a href="http://localhost:3000/users/5"> djmusik was here</a><p>Here for the artist</p></div><div><a href="http://localhost:3000/users/4"> carl123 was here</a><p>Passing by. Sup peeps!</p></div><div><a href="http://localhost:3000/users/4"> carl123 was here</a><p>Who came here because of that new show that no one cares about? Me too.</p></div><div><a href="http://localhost:3000/users/3"> k-indie was here</a><p>Song to get through the day</p></div><div><a href="http://localhost:3000/users/3"> k-indie was here</a><p>Feeling the beat</p></div></div><div class="main_container"><div>Songs</div><div><a href="http://localhost:3000/users/10"> rhymesguy was here</a><p>Great vibes!</p></div><div><a href="http://localhost:3000/users/10"> rhymesguy was here</a><p>Who is the artist?</p></div><div><a href="http://localhost:3000/users/9"> airmusic was here</a><p>Loving the guitar</p></div><div><a href="http://localhost:3000/users/9"> airmusic was here</a><p>Take me back to my childhood</p></div><div><a href="http://localhost:3000/users/8"> joe123 was here</a><p>Love the song</p></div><div><a href="http://localhost:3000/users/8"> joe123 was here</a><p>Just my style</p></div><div><a href="http://localhost:3000/users/7"> hipgal was here</a><p>Listening to this in 2019</p></div><div><a href="http://localhost:3000/users/7"> hipgal was here</a><p>Helps me do my hw XD</p></div><div><a href="http://localhost:3000/users/6"> music247 was here</a><p>@doge You will like this</p></div><div><a href="http://localhost:3000/users/5"> djmusik was here</a><p>This has been my song for years</p></div><div><a href="http://localhost:3000/users/5"> djmusik was here</a><p>Here for the artist</p></div><div><a href="http://localhost:3000/users/4"> carl123 was here</a><p>Passing by. Sup peeps!</p></div><div><a href="http://localhost:3000/users/4"> carl123 was here</a><p>Who came here because of that new show that no one cares about? Me too.</p></div><div><a href="http://localhost:3000/users/3"> k-indie was here</a><p>Song to get through the day</p></div><div><a href="http://localhost:3000/users/3"> k-indie was here</a><p>Feeling the beat</p></div></div><div class="main_container"><div>Songs</div><div><a href="http://localhost:3000/users/10"> rhymesguy was here</a><p>Great vibes!</p></div><div><a href="http://localhost:3000/users/10"> rhymesguy was here</a><p>Who is the artist?</p></div><div><a href="http://localhost:3000/users/9"> airmusic was here</a><p>Loving the guitar</p></div><div><a href="http://localhost:3000/users/9"> airmusic was here</a><p>Take me back to my childhood</p></div><div><a href="http://localhost:3000/users/8"> joe123 was here</a><p>Love the song</p></div><div><a href="http://localhost:3000/users/8"> joe123 was here</a><p>Just my style</p></div><div><a href="http://localhost:3000/users/7"> hipgal was here</a><p>Listening to this in 2019</p></div><div><a href="http://localhost:3000/users/7"> hipgal was here</a><p>Helps me do my hw XD</p></div><div><a href="http://localhost:3000/users/6"> music247 was here</a><p>@doge You will like this</p></div><div><a href="http://localhost:3000/users/5"> djmusik was here</a><p>This has been my song for years</p></div><div><a href="http://localhost:3000/users/5"> djmusik was here</a><p>Here for the artist</p></div><div><a href="http://localhost:3000/users/4"> carl123 was here</a><p>Passing by. Sup peeps!</p></div><div><a href="http://localhost:3000/users/4"> carl123 was here</a><p>Who came here because of that new show that no one cares about? Me too.</p></div><div><a href="http://localhost:3000/users/3"> k-indie was here</a><p>Song to get through the day</p></div><div><a href="http://localhost:3000/users/3"> k-indie was here</a><p>Feeling the beat</p></div></div><div class="main_container"><div>Songs</div><div><a href="http://localhost:3000/users/10"> rhymesguy was here</a><p>Great vibes!</p></div><div><a href="http://localhost:3000/users/10"> rhymesguy was here</a><p>Who is the artist?</p></div><div><a href="http://localhost:3000/users/9"> airmusic was here</a><p>Loving the guitar</p></div><div><a href="http://localhost:3000/users/9"> airmusic was here</a><p>Take me back to my childhood</p></div><div><a href="http://localhost:3000/users/8"> joe123 was here</a><p>Love the song</p></div><div><a href="http://localhost:3000/users/8"> joe123 was here</a><p>Just my style</p></div><div><a href="http://localhost:3000/users/7"> hipgal was here</a><p>Listening to this in 2019</p></div><div><a href="http://localhost:3000/users/7"> hipgal was here</a><p>Helps me do my hw XD</p></div><div><a href="http://localhost:3000/users/6"> music247 was here</a><p>@doge You will like this</p></div><div><a href="http://localhost:3000/users/5"> djmusik was here</a><p>This has been my song for years</p></div><div><a href="http://localhost:3000/users/5"> djmusik was here</a><p>Here for the artist</p></div><div><a href="http://localhost:3000/users/4"> carl123 was here</a><p>Passing by. Sup peeps!</p></div><div><a href="http://localhost:3000/users/4"> carl123 was here</a><p>Who came here because of that new show that no one cares about? Me too.</p></div><div><a href="http://localhost:3000/users/3"> k-indie was here</a><p>Song to get through the day</p></div><div><a href="http://localhost:3000/users/3"> k-indie was here</a><p>Feeling the beat</p></div></div><div class="main_container"><div>Songs</div><div><a href="http://localhost:3000/users/10"> rhymesguy was here</a><p>Great vibes!</p></div><div><a href="http://localhost:3000/users/10"> rhymesguy was here</a><p>Who is the artist?</p></div><div><a href="http://localhost:3000/users/9"> airmusic was here</a><p>Loving the guitar</p></div><div><a href="http://localhost:3000/users/9"> airmusic was here</a><p>Take me back to my childhood</p></div><div><a href="http://localhost:3000/users/8"> joe123 was here</a><p>Love the song</p></div><div><a href="http://localhost:3000/users/8"> joe123 was here</a><p>Just my style</p></div><div><a href="http://localhost:3000/users/7"> hipgal was here</a><p>Listening to this in 2019</p></div><div><a href="http://localhost:3000/users/7"> hipgal was here</a><p>Helps me do my hw XD</p></div><div><a href="http://localhost:3000/users/6"> music247 was here</a><p>@doge You will like this</p></div><div><a href="http://localhost:3000/users/5"> djmusik was here</a><p>This has been my song for years</p></div><div><a href="http://localhost:3000/users/5"> djmusik was here</a><p>Here for the artist</p></div><div><a href="http://localhost:3000/users/4"> carl123 was here</a><p>Passing by. Sup peeps!</p></div><div><a href="http://localhost:3000/users/4"> carl123 was here</a><p>Who came here because of that new show that no one cares about? Me too.</p></div><div><a href="http://localhost:3000/users/3"> k-indie was here</a><p>Song to get through the day</p></div><div><a href="http://localhost:3000/users/3"> k-indie was here</a><p>Feeling the beat</p></div></div><div class="main_container"><div>Songs</div><div><a href="http://localhost:3000/users/10"> rhymesguy was here</a><p>Great vibes!</p></div><div><a href="http://localhost:3000/users/10"> rhymesguy was here</a><p>Who is the artist?</p></div><div><a href="http://localhost:3000/users/9"> airmusic was here</a><p>Loving the guitar</p></div><div><a href="http://localhost:3000/users/9"> airmusic was here</a><p>Take me back to my childhood</p></div><div><a href="http://localhost:3000/users/8"> joe123 was here</a><p>Love the song</p></div><div><a href="http://localhost:3000/users/8"> joe123 was here</a><p>Just my style</p></div><div><a href="http://localhost:3000/users/7"> hipgal was here</a><p>Listening to this in 2019</p></div><div><a href="http://localhost:3000/users/7"> hipgal was here</a><p>Helps me do my hw XD</p></div><div><a href="http://localhost:3000/users/6"> music247 was here</a><p>@doge You will like this</p></div><div><a href="http://localhost:3000/users/5"> djmusik was here</a><p>This has been my song for years</p></div><div><a href="http://localhost:3000/users/5"> djmusik was here</a><p>Here for the artist</p></div><div><a href="http://localhost:3000/users/4"> carl123 was here</a><p>Passing by. Sup peeps!</p></div><div><a href="http://localhost:3000/users/4"> carl123 was here</a><p>Who came here because of that new show that no one cares about? Me too.</p></div><div><a href="http://localhost:3000/users/3"> k-indie was here</a><p>Song to get through the day</p></div><div><a href="http://localhost:3000/users/3"> k-indie was here</a><p>Feeling the beat</p></div></div><div class="main_container"><div>Songs</div><div><a href="http://localhost:3000/users/10"> rhymesguy was here</a><p>Great vibes!</p></div><div><a href="http://localhost:3000/users/10"> rhymesguy was here</a><p>Who is the artist?</p></div><div><a href="http://localhost:3000/users/9"> airmusic was here</a><p>Loving the guitar</p></div><div><a href="http://localhost:3000/users/9"> airmusic was here</a><p>Take me back to my childhood</p></div><div><a href="http://localhost:3000/users/8"> joe123 was here</a><p>Love the song</p></div><div><a href="http://localhost:3000/users/8"> joe123 was here</a><p>Just my style</p></div><div><a href="http://localhost:3000/users/7"> hipgal was here</a><p>Listening to this in 2019</p></div><div><a href="http://localhost:3000/users/7"> hipgal was here</a><p>Helps me do my hw XD</p></div><div><a href="http://localhost:3000/users/6"> music247 was here</a><p>@doge You will like this</p></div><div><a href="http://localhost:3000/users/5"> djmusik was here</a><p>This has been my song for years</p></div><div><a href="http://localhost:3000/users/5"> djmusik was here</a><p>Here for the artist</p></div><div><a href="http://localhost:3000/users/4"> carl123 was here</a><p>Passing by. Sup peeps!</p></div><div><a href="http://localhost:3000/users/4"> carl123 was here</a><p>Who came here because of that new show that no one cares about? Me too.</p></div><div><a href="http://localhost:3000/users/3"> k-indie was here</a><p>Song to get through the day</p></div><div><a href="http://localhost:3000/users/3"> k-indie was here</a><p>Feeling the beat</p></div></div><div class="main_container"><div>Songs</div><div><a href="http://localhost:3000/users/10"> rhymesguy was here</a><p>Great vibes!</p></div><div><a href="http://localhost:3000/users/10"> rhymesguy was here</a><p>Who is the artist?</p></div><div><a href="http://localhost:3000/users/9"> airmusic was here</a><p>Loving the guitar</p></div><div><a href="http://localhost:3000/users/9"> airmusic was here</a><p>Take me back to my childhood</p></div><div><a href="http://localhost:3000/users/8"> joe123 was here</a><p>Love the song</p></div><div><a href="http://localhost:3000/users/8"> joe123 was here</a><p>Just my style</p></div><div><a href="http://localhost:3000/users/7"> hipgal was here</a><p>Listening to this in 2019</p></div><div><a href="http://localhost:3000/users/7"> hipgal was here</a><p>Helps me do my hw XD</p></div><div><a href="http://localhost:3000/users/6"> music247 was here</a><p>@doge You will like this</p></div><div><a href="http://localhost:3000/users/5"> djmusik was here</a><p>This has been my song for years</p></div><div><a href="http://localhost:3000/users/5"> djmusik was here</a><p>Here for the artist</p></div><div><a href="http://localhost:3000/users/4"> carl123 was here</a><p>Passing by. Sup peeps!</p></div><div><a href="http://localhost:3000/users/4"> carl123 was here</a><p>Who came here because of that new show that no one cares about? Me too.</p></div><div><a href="http://localhost:3000/users/3"> k-indie was here</a><p>Song to get through the day</p></div><div><a href="http://localhost:3000/users/3"> k-indie was here</a><p>Feeling the beat</p></div></div><div class="main_container"><div>Songs</div><div><a href="http://localhost:3000/users/10"> rhymesguy was here</a><p>Great vibes!</p></div><div><a href="http://localhost:3000/users/10"> rhymesguy was here</a><p>Who is the artist?</p></div><div><a href="http://localhost:3000/users/9"> airmusic was here</a><p>Loving the guitar</p></div><div><a href="http://localhost:3000/users/9"> airmusic was here</a><p>Take me back to my childhood</p></div><div><a href="http://localhost:3000/users/8"> joe123 was here</a><p>Love the song</p></div><div><a href="http://localhost:3000/users/8"> joe123 was here</a><p>Just my style</p></div><div><a href="http://localhost:3000/users/7"> hipgal was here</a><p>Listening to this in 2019</p></div><div><a href="http://localhost:3000/users/7"> hipgal was here</a><p>Helps me do my hw XD</p></div><div><a href="http://localhost:3000/users/6"> music247 was here</a><p>@doge You will like this</p></div><div><a href="http://localhost:3000/users/5"> djmusik was here</a><p>This has been my song for years</p></div><div><a href="http://localhost:3000/users/5"> djmusik was here</a><p>Here for the artist</p></div><div><a href="http://localhost:3000/users/4"> carl123 was here</a><p>Passing by. Sup peeps!</p></div><div><a href="http://localhost:3000/users/4"> carl123 was here</a><p>Who came here because of that new show that no one cares about? Me too.</p></div><div><a href="http://localhost:3000/users/3"> k-indie was here</a><p>Song to get through the day</p></div><div><a href="http://localhost:3000/users/3"> k-indie was here</a><p>Feeling the beat</p></div></div><div class="main_container"><div>Songs</div><div><a href="http://localhost:3000/users/10"> rhymesguy was here</a><p>Great vibes!</p></div><div><a href="http://localhost:3000/users/10"> rhymesguy was here</a><p>Who is the artist?</p></div><div><a href="http://localhost:3000/users/9"> airmusic was here</a><p>Loving the guitar</p></div><div><a href="http://localhost:3000/users/9"> airmusic was here</a><p>Take me back to my childhood</p></div><div><a href="http://localhost:3000/users/8"> joe123 was here</a><p>Love the song</p></div><div><a href="http://localhost:3000/users/8"> joe123 was here</a><p>Just my style</p></div><div><a href="http://localhost:3000/users/7"> hipgal was here</a><p>Listening to this in 2019</p></div><div><a href="http://localhost:3000/users/7"> hipgal was here</a><p>Helps me do my hw XD</p></div><div><a href="http://localhost:3000/users/6"> music247 was here</a><p>@doge You will like this</p></div><div><a href="http://localhost:3000/users/5"> djmusik was here</a><p>This has been my song for years</p></div><div><a href="http://localhost:3000/users/5"> djmusik was here</a><p>Here for the artist</p></div><div><a href="http://localhost:3000/users/4"> carl123 was here</a><p>Passing by. Sup peeps!</p></div><div><a href="http://localhost:3000/users/4"> carl123 was here</a><p>Who came here because of that new show that no one cares about? Me too.</p></div><div><a href="http://localhost:3000/users/3"> k-indie was here</a><p>Song to get through the day</p></div><div><a href="http://localhost:3000/users/3"> k-indie was here</a><p>Feeling the beat</p></div></div><div class="main_container"><div>Songs</div><div><a href="http://localhost:3000/users/10"> rhymesguy was here</a><p>Great vibes!</p></div><div><a href="http://localhost:3000/users/10"> rhymesguy was here</a><p>Who is the artist?</p></div><div><a href="http://localhost:3000/users/9"> airmusic was here</a><p>Loving the guitar</p></div><div><a href="http://localhost:3000/users/9"> airmusic was here</a><p>Take me back to my childhood</p></div><div><a href="http://localhost:3000/users/8"> joe123 was here</a><p>Love the song</p></div><div><a href="http://localhost:3000/users/8"> joe123 was here</a><p>Just my style</p></div><div><a href="http://localhost:3000/users/7"> hipgal was here</a><p>Listening to this in 2019</p></div><div><a href="http://localhost:3000/users/7"> hipgal was here</a><p>Helps me do my hw XD</p></div><div><a href="http://localhost:3000/users/6"> music247 was here</a><p>@doge You will like this</p></div><div><a href="http://localhost:3000/users/5"> djmusik was here</a><p>This has been my song for years</p></div><div><a href="http://localhost:3000/users/5"> djmusik was here</a><p>Here for the artist</p></div><div><a href="http://localhost:3000/users/4"> carl123 was here</a><p>Passing by. Sup peeps!</p></div><div><a href="http://localhost:3000/users/4"> carl123 was here</a><p>Who came here because of that new show that no one cares about? Me too.</p></div><div><a href="http://localhost:3000/users/3"> k-indie was here</a><p>Song to get through the day</p></div><div><a href="http://localhost:3000/users/3"> k-indie was here</a><p>Feeling the beat</p></div></div><div class="main_container"><div>Songs</div><div><a href="http://localhost:3000/users/10"> rhymesguy was here</a><p>Great vibes!</p></div><div><a href="http://localhost:3000/users/10"> rhymesguy was here</a><p>Who is the artist?</p></div><div><a href="http://localhost:3000/users/9"> airmusic was here</a><p>Loving the guitar</p></div><div><a href="http://localhost:3000/users/9"> airmusic was here</a><p>Take me back to my childhood</p></div><div><a href="http://localhost:3000/users/8"> joe123 was here</a><p>Love the song</p></div><div><a href="http://localhost:3000/users/8"> joe123 was here</a><p>Just my style</p></div><div><a href="http://localhost:3000/users/7"> hipgal was here</a><p>Listening to this in 2019</p></div><div><a href="http://localhost:3000/users/7"> hipgal was here</a><p>Helps me do my hw XD</p></div><div><a href="http://localhost:3000/users/6"> music247 was here</a><p>@doge You will like this</p></div><div><a href="http://localhost:3000/users/5"> djmusik was here</a><p>This has been my song for years</p></div><div><a href="http://localhost:3000/users/5"> djmusik was here</a><p>Here for the artist</p></div><div><a href="http://localhost:3000/users/4"> carl123 was here</a><p>Passing by. Sup peeps!</p></div><div><a href="http://localhost:3000/users/4"> carl123 was here</a><p>Who came here because of that new show that no one cares about? Me too.</p></div><div><a href="http://localhost:3000/users/3"> k-indie was here</a><p>Song to get through the day</p></div><div><a href="http://localhost:3000/users/3"> k-indie was here</a><p>Feeling the beat</p></div></div><div class="main_container"><div>Songs</div><div><a href="http://localhost:3000/users/10"> rhymesguy was here</a><p>Great vibes!</p></div><div><a href="http://localhost:3000/users/10"> rhymesguy was here</a><p>Who is the artist?</p></div><div><a href="http://localhost:3000/users/9"> airmusic was here</a><p>Loving the guitar</p></div><div><a href="http://localhost:3000/users/9"> airmusic was here</a><p>Take me back to my childhood</p></div><div><a href="http://localhost:3000/users/8"> joe123 was here</a><p>Love the song</p></div><div><a href="http://localhost:3000/users/8"> joe123 was here</a><p>Just my style</p></div><div><a href="http://localhost:3000/users/7"> hipgal was here</a><p>Listening to this in 2019</p></div><div><a href="http://localhost:3000/users/7"> hipgal was here</a><p>Helps me do my hw XD</p></div><div><a href="http://localhost:3000/users/6"> music247 was here</a><p>@doge You will like this</p></div><div><a href="http://localhost:3000/users/5"> djmusik was here</a><p>This has been my song for years</p></div><div><a href="http://localhost:3000/users/5"> djmusik was here</a><p>Here for the artist</p></div><div><a href="http://localhost:3000/users/4"> carl123 was here</a><p>Passing by. Sup peeps!</p></div><div><a href="http://localhost:3000/users/4"> carl123 was here</a><p>Who came here because of that new show that no one cares about? Me too.</p></div><div><a href="http://localhost:3000/users/3"> k-indie was here</a><p>Song to get through the day</p></div><div><a href="http://localhost:3000/users/3"> k-indie was here</a><p>Feeling the beat</p></div></div></div></div></div></div></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <script src="./React App_files/bundle.js"></script><script src="./React App_files/0.chunk.js"></script><script src="./React App_files/main.chunk.js"></script><script src="./React App_files/main.225c18cd910d2f116d5c.hot-update.js"></script>
+
+</body></html>

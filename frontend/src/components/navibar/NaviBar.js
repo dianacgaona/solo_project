@@ -32,8 +32,15 @@ class NaviBar extends Component {
           </Link>
           <Link
             to={`/user/${this.props.currentUser.id}`}
-            className="navi-links"
+            className="navi-links pic-name"
           >
+            <div className="user-pic-div">
+              <img
+                src={this.props.currentUser.profile_pic}
+                alt=""
+                className="user-pic"
+              />
+            </div>
             {this.props.currentUser.name}
           </Link>
 
